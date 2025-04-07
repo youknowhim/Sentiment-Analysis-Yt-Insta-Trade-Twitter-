@@ -1,0 +1,1 @@
+return render_template('analysis.html', data=comments_html, encoded_img1=encoded_img1, encoded_img2=encoded_img2)

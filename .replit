@@ -1,0 +1,33 @@
+# The command that runs the program. If the interpreter field is set, it will have priority and this run command will do nothing
+run = "python3 main.py"
+
+# The primary language of the repl. There can be others, though!
+language = "python3"
+entrypoint = "main.py"
+# A list of globs that specify which files and directories should
+# be hidden in the workspace.
+hidden = ["venv", ".config", "**/__pycache__", "**/.mypy_cache", "**/*.pyc"]
+modules = ["python-3.10"]
+
+# Specifies which nix channel to use when building the environment.
+[nix]
+channel = "stable-22_11"
+
+[env]
+
+# Enable unit tests. This is only supported for a few languages.
+[unitTest]
+language = "python3"
+
+# These are the files that need to be preserved when this 
+# language template is used as the base language template
+# for Python repos imported from GitHub
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", ".config", "venv"]
+
+[deployment]
+run = ["sh", "-c", "python main.py"]
+
+[[ports]]
+localPort = 81
+externalPort = 80
