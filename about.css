@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+
+.hero-section-about{
+  position: relative;
+  background-color: #ede8e2;
+  z-index:-3;
+}
+.about_hero_img{
+  height: 100vh;
+  width: 60%;
+  animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 1s backwards;
+}
+  @keyframes image-in {
+    from {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+.hero-section-about h2 {
+  width: 50vw;
+  margin-left: 50%;
+  position: absolute;
+  color: black;
+  font-size: 50px;
+  font-weight: bolder;
+  top: 20vh;
+  animation: inner-left 1s 1s ease both;
+}
+@keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+#about-heading {
+  position: absolute;
+  margin: auto;
+  width: 50vw;
+  height: 80pt;
+  top: 0;
+  bottom: 0;
+  color: black;
+
+  filter: url(#threshold-about) blur(0.6px);
+}
+
+#text1-about,
+#text2-about {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 80pt;
+
+  text-align: center;
+
+  user-select: none;
+}
+
+@media only screen and  (max-width: 768px) {
+  #text1-about,
+  #text2-about {
+    font-size: 50pt;
+  }
+  #about-heading {
+    height: 50pt;
+  }
+} 
+@media only screen and  (max-width: 425px) {
+  #text1-about,
+  #text2-about {
+    font-size: 30pt;
+  }
+  #about-heading {
+    height: 30pt;
+    width: 30vw;
+  }
+  .hero-section-about h2 {
+    font-size: 30px;
+  }
+  #filters-about{
+    width: 100px;
+  }
+} 
+.about_down_heading{
+  font-size: 40px;
+  font-family: 'Chilanka', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:20px 0 20px 0 ;
+  font-weight: bolder;
+}
+
+
+
+/* sdfghjk */
+.hidden {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all 1s ease;
+  }
+  
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

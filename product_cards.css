@@ -1,0 +1,39 @@
+.snapdeal_product,.flipkart_product,.slatehouse_product{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-gap: 40px;
+  margin: 40px auto;
+  padding: 20px;
+}
+.snapdeal_price_info,.flipkart_price_info,.slatehouse_price_info{
+  display:flex;
+  gap:20px;
+}
+.snapdeal_product_card,.flipkart_product_card,.slatehouse_product_card{
+  width:100%;
+  margin:10px;
+  border-radius:20px;
+  padding:5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.snapdeal_product_card a,.flipkart_product_card a,.slatehouse_product_card a{
+  text-decoration:none;
+  font-size:15px;
+  font-weight:bolder;
+  color:black;
+}
+.new_price{
+  color:red;
+  font-size:20px;
+  font-weight:bolder;
+}
+
+.snapdeal_product_card img,.flipkart_product_card img,.slatehouse_product_card img{
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  transition: transform .3s ease-out;
+}
+.snapdeal_product_card img:hover,.flipkart_product_card img:hover,.slatehouse_product_card img:hover{
+  transform: scale(1.1);
+}

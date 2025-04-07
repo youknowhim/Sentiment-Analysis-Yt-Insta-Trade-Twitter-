@@ -1,0 +1,83 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+
+.about-features .box p {
+    color: var(--grayishBlue);
+}
+
+.about-features .box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;  
+}
+
+.about-features img {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .about-features .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .about-features .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+.red {
+    border-top: 3px solid var(--red);
+}
+.blue {
+    border-top: 3px solid var(--blue);
+}
+.orange {
+    border-top: 3px solid var(--orange);
+}
+
+.about-features h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+
+@media (min-width: 950px) {
+    .about-features .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-features .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-features .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .about-features .box {
+        width: 20%;
+     
+    }
+    
+}

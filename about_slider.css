@@ -1,0 +1,41 @@
+.slider-about {
+    height: 75pt;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    user-select: none;
+    touch-action: none;
+}
+
+.slider-about .slide-track-1-about {
+    animation: scroll-l 10s linear infinite;
+    display: flex;
+    width: 3500px;
+}
+
+.slider-about .slide-about {
+    height: 75pt;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.slider-about .slide-about img {
+    width: 180px;
+    padding: 1pc;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes scroll-l {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-150px * 7));
+    }
+}

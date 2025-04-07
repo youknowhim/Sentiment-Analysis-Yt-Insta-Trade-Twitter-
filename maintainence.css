@@ -1,0 +1,29 @@
+.error_page{
+  position:relative;
+}
+.error,.error_msg{
+  font-size:100px;
+  font-weight:bolder;
+  font-family: 'Anton', sans-serif;
+  font-family: 'Combo', cursive;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.error_msg{
+  font-size:40px;
+}
+.error_img{
+  top:10px;
+  height:300px;
+  width:auto;
+  margin-left:40%;
+  position:absolute;
+  z-index:-1;
+}
+@media only screen and (max-width:425px){
+  .error_img{
+  width:90vw;
+  margin-left:auto;
+  }
+}

@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Sacramento");
+.card__button a{
+  text-decoration:none;
+}
+.about_gallary .main-container-about-gallary {
+    margin-bottom: 2rem;
+  }
+  
+  .about_gallary .grid-container-about-gallary {
+    margin: auto;
+    display: grid;
+    grid-gap: 1.1312rem;
+    grid-template-columns: repeat(auto-fit, 12.8rem);
+    grid-auto-rows: 12.8rem;
+    grid-auto-flow: dense;
+    justify-content: center;
+    max-width: 80em;
+  }
+  
+  .about_gallary .card {
+    grid-row: auto/span 1;
+    grid-column: auto/span 1;
+    background-color: white;
+    box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
+  }
+  .about_gallary .card h1,.about_gallary .card h2,.about_gallary .card h3,.about_gallary .card h4,.about_gallary .card p {
+    margin-top: 0;
+    font-weight: normal;
+  }
+  .about_gallary .card__image {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  .about_gallary .card__image img {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: contain;
+  }
+  .about_gallary .card__side-by-side {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .about_gallary .card__side-by-side--m {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .about_gallary .card__side-by-side--m img {
+    min-height: auto;
+  }
+  .about_gallary .card__content {
+    padding: 1.6rem;
+  }
+  .about_gallary .card__button {
+    margin: 1.6rem 0;
+    text-align: center;
+    padding: 0.8rem 1.6rem;
+    background: none;
+    border: 0.5px solid #777;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .about_gallary .card__button:hover {
+    border-color: #d099a0;
+  }
+  .about_gallary .card--featured {
+    grid-row: auto/span 3;
+    grid-column: auto/span 2;
+  }
+  .about_gallary .card--2x {
+    grid-row: auto/span 2;
+    grid-column: auto/span 2;
+  }
+  .about_gallary .card--vertical {
+    grid-row: auto/span 2;
+  }
+  .about_gallary .card--horizontal {
+    grid-column: auto/span 2;
+  }
+  .about_gallary .card--frameless {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  .about_gallary .padding-large {
+    padding: 3.2rem;
+  }
+  .about_gallary .padding-large--l {
+    padding: 1.6rem;
+  }
+  
+  .about_gallary .big-script {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sacramento", sans-serif;
+    font-size: 5em;
+    line-height: 1.15em;
+    text-align: center;
+  }
+  .about_gallary .big-script p {
+    margin: 0;
+    font-family: "Sacramento", sans-serif;
+    font-size: 60px;
+  }
+
+  @media (max-width: 413px) {
+    .grid-container-about-gallary {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+    }
+  
+    .grid-container-about-gallary .card {
+      min-height: 12.8rem;
+    }
+  }
+  @media (min-width: 627px) {
+    .grid-container-about-gallary {
+      grid-gap: 1.6rem;
+    }
+  
+    .grid-container-about-gallary .card__side-by-side--m {
+      flex-flow: row nowrap;
+    }
+    .grid-container-about-gallary .card__side-by-side--m img {
+      min-height: 100%;
+    }
+    .grid-container-about-gallary .card--featured {
+      grid-row: auto/span 2;
+      grid-column: 1/-1;
+    }
+  }
+  @media (min-width: 836px) {
+    .padding-large--l {
+      padding: 3.2rem;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .about_gallary .big-script p {
+        font-size: 50px;
+      }
+  }
