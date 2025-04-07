@@ -1,0 +1,200 @@
+{% extends "layout.html"%}
+{%block body%}
+<section class="hero-section-about hidden reveal">
+        <img class="about_hero_img" src="{{url_for('static', filename='img/about_image6.jpg')}}">
+        <h2>
+            A store where you can find 
+            <div id="about-heading">
+                <span id="text1-about"></span>
+                <span id="text2-about"></span>
+            </div>
+            
+            <svg id="filters-about">
+                <defs>
+                    <filter id="threshold-about">
+                        <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                                0 1 0 0 0
+                                                0 0 1 0 0
+                                                0 0 0 255 -140" />
+                    </filter>
+                </defs>
+            </svg>
+            together
+        </h2>
+    </section>
+    <section class="container-about ">
+        <section class="about_gallary">
+            <div class='main-container-about-gallary'>
+                <div class='grid-container-about-gallary'>
+                    <div class='card card--2x hidden'>
+                        <div class='card__content big-script padding-large'>
+                            <p>Search different E-commerce at one place</p>
+                        </div>
+                    </div>
+                    <div class='card hidden' >
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/amazon_app.png')}}">
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/myntra_app.jpg')}}">
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__content'>
+                            <p><em>Get all products of different ecommerce at a single place</em></p>
+                        </div>
+                    </div>
+                    <div class='card card--horizontal hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/about_image4.jpg')}}">
+                        </div>
+                    </div>
+                    <div class='card card--featured hidden'>
+                        <div class='card__side-by-side--m'>
+                            <div class='card__image'>
+                                <img src="{{url_for('static', filename='img/clotheimage1.png')}}">
+                            </div>
+                            <div class='card__content padding-large--l hidden'>
+                                <h2>why?</h2>
+                                <p>People face problems to compare offers on same products on different E-commerce
+                                    plateforms</p>
+                                <p>To get rid of this feel free to try our service.
+                                </p>
+                                <button class='card__button'><a href="/">Try..</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card card--vertical hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/femalemodel1.png')}}">
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/about_image1.png')}}">
+                        </div>
+                    </div>
+                    <div class='card card--horizontal hidden'>
+                        <div class='card__side-by-side'>
+                            <div class='card__image'>
+                                <img src="{{url_for('static', filename='img/clock.png')}}">
+                            </div>
+                            <div class='card__content'>
+                                <h3>Compromise with Latest styles?</h3>
+                                <p>Duh!</p>
+                                <p>Enjoy the latest the styles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='card card--vertical hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/malemodel1.png')}}">
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__image '>
+                            <img src="{{url_for('static', filename='img/about_image2.png')}}">
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__content'>
+                            <p><em> Coz we care your time and want to save it</em></p>
+                        </div>
+                    </div>
+                    <div class='card card--2x hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/femalemodel2.jpg')}}">
+                        </div>
+                    </div>
+                    <div class='card card--horizontal card--frameless hidden'>
+                        <div class='card__content big-script'>
+                            <p>Hurray!</p>
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/flipkart_app.png')}}">
+                        </div>
+                    </div>
+                    <div class='card card--horizontal hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/about_image3.png')}}">
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/about_image7.jpg')}}">
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__content'>
+                            <p><em>We cover all major E-commerce Brands</em></p>
+                        </div>
+                    </div>
+                    <div class='card hidden'>
+                        <div class='card__image'>
+                            <img src="{{url_for('static', filename='img/about_image5.jpg')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- slider -->
+    <h2 class="about_down_heading">Ecommerce brands</h2>
+    <div class="slider-about" >
+        <div class="slide-track-1-about">
+            <div class="slide-about">
+                <img src="{{url_for('static', filename='img/amazon.png')}}" alt="">
+            </div>
+            <div class="slide-about">
+                <img src="{{url_for('static', filename='img/flipkart.jpg')}}" alt="">
+            </div>
+            <div class="slide-about">
+                <img src="{{url_for('static', filename='img/myntra.png')}}" alt="">
+            </div>
+            <div class="slide-about">
+                <img src="{{url_for('static', filename='img/TataCliq.png')}}" alt="">
+            </div>
+            <div class="slide-about">
+                <img src="{{url_for('static', filename='img/ajio.png')}}" alt="">
+            </div>
+            <div class="slide-about">
+                <img src="{{url_for('static', filename='img/slatehouse.png')}}" alt="">
+            </div>
+        </div>
+    </div>
+    <!--properties -->
+    <h2 class="about_down_heading">We provide our services with-</h2>
+    <section class="about-features hidden">
+        <div class="row1-container">
+            <div class="box box-down cyan">
+                <h2>Easy Search</h2>
+                <p>Search products of various major ecommerce plateforms easily at one place </p>
+                <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+            </div>
+
+            <div class="box red">
+                <h2>No Signup/Signin</h2>
+                <p>No need to create any account to use our service</p>
+                <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+            </div>
+
+            <div class="box box-down blue">
+                <h2>Fast</h2>
+                <p>Search products in few seconds and get rid of the headache to search a product at a perfect price</p>
+                <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+            </div>
+        </div>
+        <div class="row2-container">
+            <div class="box orange">
+                <h2>Latest Styles</h2>
+                <p>Get the latest and modern styles</p>
+                <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+            </div>
+        </div>
+    </section>
+<script src="{{ url_for('static', filename='js/about.js') }}"></script>
+{%endblock%}

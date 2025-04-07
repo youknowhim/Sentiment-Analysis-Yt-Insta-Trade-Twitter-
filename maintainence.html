@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="error_page">
+<h1 class="error">Sorry</h1>
+<img class="error_img" src="{{url_for('static', filename='img/error.gif')}}">
+<p class="error_msg">{{message}}</p>
+</div>
+{%endblock%}

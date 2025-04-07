@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="{{ url_for('static', filename='css/layout.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/product_slider.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/footer.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/maintainence.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/about_slider.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/about_gallary.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/about_feature.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/product_cards.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/404.css') }}" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<header class="header" id="header">
+  <!-- hamburger menu -->
+  <div id="circularMenu1" class="circular-menu circular-menu-left active">
+    <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+      <i class="fa fa-bars"></i>
+    </a>
+    <menu class="items-wrapper">
+      <a href="/" class="menu-item fa fa-home"></a>
+      <a href="#" class="menu-item fa fa-shopping-basket"></a>
+      <a href="/about" class="menu-item fa fa-info"></a>
+    </menu>
+  </div>
+  <!-- search bar -->
+  <form name="search" id="searchForm" action="{{ url_for('ecommerce') }}" method="POST" novalidate>
+    <div class="search_bar">
+        <input type="text" class="search_input" placeholder="search" name="searchquery" required>
+        <button type="submit" class="button_input"><i class="fa fa-search"></i></button>
+    </div>
+</form>
+
+  <!-- logo -->
+  <div class="logo">
+    <img  class="logo_img" src="{{url_for('static', filename='img/attachment_109048124.png')}}" alt="my logo">
+  </div>
+  
+</header>
+
+<main class='main'>
+  <!-- sliding menu -->
+  <div class="wrapper">
+      <div class="icon"><i id="left" class="fa fa-arrow-left"></i></div>
+      <ul class="tabs-box">
+        <li class="tab  active">Products</li>
+        <li class="tab">Companies</li>
+        <li class="tab">Social Media</li>
+        <li class="tab">IT technologies</li>
+        <li class="tab">Cyber Security</li>
+        <li class="tab">Political Leaders</li>
+        <li class="tab">Gaming</li>
+        <li class="tab">Share Market</li>
+        <li class="tab">Movies</li>
+      </ul>
+      <div class="icon"><i id="right" class="fa fa-arrow-right"></i></div>
+  </div>
+  <hr>
+  <section class="main_content">
+    {% block body %} {% endblock %}
+  </section>
+</main>
+
+<footer>
+  <div class="footer_top">
+    <div><img  class="footer_logo" src="{{url_for('static', filename='img/attachment_109048124.png')}}" alt="my logo"></div>
+    <div class="bar"></div>
+    <div class="footer_top_content">
+      <div class="legal">
+        <div>
+          <h2>Legal</h2>
+          <div class="legal_margin"><a href="/terms">Terms and Conditions</a></div>
+          <div class="legal_margin"><a href="/privacy">Privacy</a></div>
+        </div>
+      </div>
+      
+      <div class="links">
+        <div class="apps">
+          <div class="app_logo_div"><a href="/application"><img class="app_logo" src="{{url_for('static', filename='img/playstore.png')}}" alt="my logo"></a></div>
+          <div class="app_logo_div"><a href="/application"><img class="app_logo" src="{{url_for('static', filename='img/appstore.png')}}" alt="my logo"></a></div>
+        </div>
+        <div class="social_media">
+          <div class="sicon"><a href="#"><i  class="fa fa-facebook-official"></i></a></div>
+          <div class="sicon"><a href="#"><i  class="fa fa-twitter"></i></a></div>
+          <div class="sicon"><a href="#"><i  class="fa fa-youtube-play"></i></a></div>
+          <div class="sicon"><a href="#"><i  class="fa fa-instagram"></i></a></div>
+        </div>
+    </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright &#169 2023 <a href="/terms">All rights reserved</a></p>
+  </div>
+</footer>
+  
+<script src="{{ url_for('static', filename='js/layout.js') }}"></script>
+</body>
+
+</html>

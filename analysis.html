@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #searchForm {
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            background: #ff0000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #videoResults {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .video-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+        }
+        .video-card img {
+            width: 100%;
+            max-width: 400px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sentiment.positive {
+            color: green;
+        }
+        .sentiment.negative {
+            color: red;
+        }
+        .sentiment.neutral {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sentiment Distribution</h2>
+    <img src="data:image/png;base64,{{ encoded_img1 }}" alt="Sentiment Distribution" width="600px">
+    {% if encoded_img2 %}
+    <h2>Average Comment Likes per Sentiment</h2>
+    <img src="data:image/png;base64,{{ encoded_img2 }}" alt="Average Likes per Sentiment" width="600px">
+    {% endif %}
+    <h2>Average Comment Likes per Sentiment</h2>
+    <img src="data:image/png;base64,{{ encoded_img3 }}" width="700px">
+
+    {% if encoded_img4 %}
+    <h2>Positive Comments Word Cloud</h2>
+    <img src="data:image/png;base64,{{ encoded_img4 }}" alt="Positive Comments Word Cloud">
+{% endif %}
+
+{% if encoded_img5 %}
+    <h2>Negative Comments Word Cloud</h2>
+    <img src="data:image/png;base64,{{ encoded_img5 }}" alt="Negative Comments Word Cloud">
+{% endif %}
+
+    
+    <div id="videoResults">
+       {{data | safe}}
+    </div>
+</body>
+</html>

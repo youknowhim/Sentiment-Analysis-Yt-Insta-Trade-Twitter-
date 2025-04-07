@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body%}
+<div class="product_slider">
+  
+  <div class="iconp"><i id="leftp" class="fa fa-arrow-left"></i></div>
+  <div class=product_slider_div>
+    <li data-li="amazon" class="sli_tab activep"><img class="p_logo" src="{{url_for('static', filename='img/amazon.png')}}" alt="amazon"></li>
+    <li data-li="flipkart" class="sli_tab"><img class="p_logo" src="{{url_for('static', filename='img/flipkart.jpg')}}" alt="flipkart"></li>
+    <li data-li="snapdeal" class="sli_tab"><img class="p_logo" src="{{url_for('static', filename='img/Snapdeal.png')}}" alt="snapdeal"></li>
+    <li data-li="slatehouse" class="sli_tab"><img class="p_logo" src="{{url_for('static', filename='img/slatehouse.png')}}" alt="slatehouse"></li>
+    <li data-li="tata" class="sli_tab"><img class="p_logo" src="{{url_for('static', filename='img/TataCliq.png')}}" alt="tatacliq"></li>
+    <li data-li="myntra" class="sli_tab"><img class="p_logo" src="{{url_for('static', filename='img/myntra.png')}}" alt="myntra"></li>
+    <li data-li="ajio" class="sli_tab"><img class="p_logo" src="{{url_for('static', filename='img/ajio.png')}}" alt="ajio"></li>
+    <li data-li="random" class="sli_tab"><img class="p_logo" src="{{url_for('static', filename='img/TataCliq.png')}}" alt="tatacliq"></li>  
+  </div>
+  <div class="iconp"><i id="rightp" class="fa fa-arrow-right"></i></div>
+
+</div>
+
+<section class="companies amazon">amazon</section>
+
+<section class="companies flipkart" style="display: none;">
+  <div class="flipkart_product">
+    {% for item in flipkart_data %}
+    <div class="flipkart_product_card">
+      <a href="{{item["link"]}}" target="_blank">
+        <img src="{{item["image"]}}">
+        <p>{{item["title"]}}</p>
+        <div class="flipkart_price_info">
+          <p class="new_price">{{item["new_price"]}}</p>
+          <p><strike>{{item["old_price"]}}</strike></p>
+          <p>{{item["off"]}}</p>
+        </div>
+        <p>{{item["rating"]}}</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="companies snapdeal" style="display: none;">
+  <div class="snapdeal_product">
+    {% for item in snapdeal_data %}
+    <div class="snapdeal_product_card">
+      <a href="{{item["link"]}}" target="_blank">
+        <img src="{{item["image"]}}">
+        <p>{{item["title"]}}</p>
+        <div class="snapdeal_price_info">
+          <p class="new_price">{{item["new_price"]}}</p>
+          <p><strike>{{item["old_price"]}}</strike></p>
+          <p>{{item["off"]}}</p>
+        </div>
+        <p>{{item["rating"]}} ratings</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="companies slatehouse" style="display: none;">
+  <div class="slatehouse_product">
+    {% for item in slatehouse_data %}
+    <div class="slatehouse_product_card">
+      <a href="{{item["link"]}}" target="_blank">
+        <img src="{{item["image"]}}">
+        <p>{{item["title"]}}</p>
+        <div class="slatehouse_price_info">
+          <p class="new_price">{{item["newprice"]}}</p>
+          <p><strike>{{item["oldprice"]}}</strike></p>
+          <p>{{item["off"]}}</p>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<section class="companies tata" style="display: none;">tata</section>
+<section class="companies myntra" style="display: none;">myntra</section>
+<section class="companies ajio" style="display: none;">ajio</section>
+<section class="companies random" style="display: none;">random</section>
+
+<script src="{{ url_for('static', filename='js/product_slider.js') }}"></script>
+<script src="{{ url_for('static', filename='js/product_toggle.js') }}"></script>
+{{query}}
+{%endblock%} 
